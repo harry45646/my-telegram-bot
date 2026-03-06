@@ -397,7 +397,7 @@ async def can_use(user_id, chat):
 def get_cc_limit(access_type, user_id=None):
     # Check if user is admin first
     if user_id and user_id in ADMIN_ID:
-        return 2000
+        return 5000
     if access_type in ["premium_private", "premium_group"]:
         return 500
     elif access_type == "group_free":
@@ -1373,7 +1373,7 @@ async def info(event):
 𝙉𝙖𝙢𝙚 ⇾ {full_name}
 𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚 ⇾ {username}
 𝙐𝙨𝙚𝙧 𝙄𝘿 ⇾ `{user_id}`
-𝙋𝙧  𝙞𝙫𝙖𝙩𝙚 𝘼𝙘𝙘𝙚𝙨𝙨 ⇾ {premium_status}
+𝙋𝙧𝙞𝙫𝙖𝙩𝙚 𝘼𝙘𝙘𝙚𝙨𝙨 ⇾ {premium_status}
 
 𝙎𝙞𝙩𝙚𝙨 ⇾ ({len(user_sites)}):
 
@@ -2229,3 +2229,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
